@@ -1,52 +1,61 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
 
 function Particle() {
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
+  }, []);
+
   return (
     <Particles
       id="tsparticles"
-      params={{
-        particles: {
-          number: {
-            value: 160,
-            density: {
-              enable: true,
-              value_area: 1500,
-            },
+      init={particlesInit}
+      options={{
+        background: {
+          color: {
+            value: "transparent",
           },
-          line_linked: {
-            enable: false,
-            opacity: 0.03,
+        },
+        fpsLimit: 120,
+        particles: {
+          color: {
+            value: "#ffffff",
+          },
+          links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.5,
+            width: 1,
           },
           move: {
-            direction: "right",
-            speed: 0.05,
+            enable: true,
+            outModes: {
+              default: "bounce",
+            },
+            random: false,
+            speed: 1,
+            straight: false,
           },
-          size: {
-            value: 1,
+          number: {
+            density: {
+              enable: true,
+              area: 800,
+            },
+            value: 80,
           },
           opacity: {
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.05,
+            value: 0.5,
             },
+          shape: {
+            type: "circle",
+            },
+          size: {
+            value: { min: 1, max: 5 },
           },
         },
-        interactivity: {
-          events: {
-            onclick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-          modes: {
-            push: {
-              particles_nb: 1,
-            },
-          },
-        },
-        retina_detect: true,
+        detectRetina: true,
       }}
     />
   );
