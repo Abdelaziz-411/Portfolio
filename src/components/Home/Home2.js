@@ -5,7 +5,6 @@ import Tilt from "react-parallax-tilt";
 import { SiGmail } from "react-icons/si";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -42,7 +41,7 @@ function Home2() {
           <Col md={12} className="home-about-social">
             <h1>Mes réseaux sociaux</h1>
             <p>
-              Vous pouvez me <span className="purple">connecter </span>sur
+              Vous pouvez me <span className="purple">contacter </span>sur
             </p>
             <ul className="home-about-social-links">
               <li className="social-icons">
