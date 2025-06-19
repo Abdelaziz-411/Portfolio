@@ -8,6 +8,7 @@ import {
   SiPhp,
   SiMysql,
   SiCsharp,
+  SiJavascript,
 } from "react-icons/si";
 
 function Techstack() {
@@ -17,10 +18,16 @@ function Techstack() {
         <CgCPlusPlus />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiCsharp />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiCss3 />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiJavascript />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiBootstrap />
@@ -30,9 +37,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiMysql />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCsharp />
       </Col>
     </Row>
   );
