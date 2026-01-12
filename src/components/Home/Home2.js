@@ -26,7 +26,7 @@ function Home2() {
               <br />
               <br />Je connais les bases en 
               <i>
-                <b className="purple"> C++, C# HTML, CSS et Javascript. </b>
+                <b className="purple"> C++, C#, Kotlin, PHP, HTML, CSS et JavaScript. </b>
               </i>
               
             </p>

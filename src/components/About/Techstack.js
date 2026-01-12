@@ -9,6 +9,7 @@ import {
   SiMysql,
   SiCsharp,
   SiJavascript,
+  SiKotlin,
 } from "react-icons/si";
 
 function Techstack() {
@@ -28,6 +29,9 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiJavascript />
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiKotlin />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiBootstrap />
