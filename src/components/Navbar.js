@@ -80,7 +80,7 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                Projets
               </Nav.Link>
             </Nav.Item>
 
@@ -95,7 +95,14 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <NavDropdown title="Stage" id="nav-stage-dropdown">
+              <NavDropdown
+                title={
+                  <span>
+                    <FaGraduationCap style={{ marginBottom: "2px" }} /> Stage
+                  </span>
+                }
+                id="nav-stage-dropdown"
+              >
                 <NavDropdown.Item
                   as={Link}
                   to="/stage"
@@ -110,6 +117,7 @@ function NavBar() {
                 >
                   2ème année
                 </NavDropdown.Item>
+                
               </NavDropdown>
             </Nav.Item>
 
