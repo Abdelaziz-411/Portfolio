@@ -47,20 +47,18 @@ const stageInfo = {
 };
 
 const companyInfo = {
-  presentation:
-    "Entreprise où le stage se concentre sur la création de composants réutilisables, l’automatisation des workflows et la mise à jour de contenus orientés services.",
-  activite: "Intégration Web, automatisation de processus, développement d’outils internes",
-  taille: "Structure à taille humaine",
-  secteur: "Services et outils numériques"
+  activite: "Nanika est une entreprise qui propose des prestations autour de l’informatique et le web : le développement web, en créant des sites sur mesure pour les entreprises locales",
+  taille: "Le fondateur travaille en Freelance tout seul et gère son entreprise à la main.",
+  secteur: "Développement informatique de sites, applications, plateformes web."
 };
 
 const contexteStage = {
   objectif:
-    "Standardiser les pages services, automatiser les tâches récurrentes et développer des applications internes pour fluidifier l’organisation.",
+    "Approfindir les compétences en développement web en développant des applications internes pour fluidifier l’organisation.",
   problematique:
     "Manque de centralisation des demandes internes et lourdeur des processus manuels. Besoin d’outils modulaires, fiables et facilement maintenables.",
   place:
-    "Stagiaire autonome, échanges réguliers pour validations; mise en place de composants réutilisables et de workflows n8n.",
+    "Stagiaire autonome, échanges réguliers pour demander du travail, accompagnement technique et validations.",
   contexte:
     "Projet mené en environnement web (PHP/JS/Bootstrap) avec automatisations (n8n, APIs) et création d’un socle technique pour des évolutions futures."
 };
@@ -132,7 +130,6 @@ function StageCurrent() {
           <Col md={6} className="stage-panel">
             <div className="stage-card-shell">
               <h3 className="stage-block-title">Présentation de l'entreprise</h3>
-              <p>{companyInfo.presentation}</p>
               <ul className="stage-list">
                 <li>
                   <FaBullseye className="list-icon" />
