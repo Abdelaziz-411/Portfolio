@@ -1,8 +1,8 @@
-import eventManager from "../Assets/Projects/event-manager.png";
-import configurateur from "../Assets/Projects/configurateur.png";
-import marronWeb from "../Assets/Projects/marronWeb.png";
-import accueilMobile from "../Assets/Projects/accueilMobile.jpg";
-import usersMobile from "../Assets/Projects/usersMobile.jpg";
+import eventManager from "../Assets/img_projects/event-manager.png";
+import configurateur from "../Assets/img_projects/configurateur.png";
+import marronWeb from "../Assets/img_projects/marronWeb.png";
+import accueilMobile from "../Assets/img_projects/accueilMobile.jpg";
+import usersMobile from "../Assets/img_projects/usersMobile.jpg";
 
 export const projects = [
   {

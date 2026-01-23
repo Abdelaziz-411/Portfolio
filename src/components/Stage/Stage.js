@@ -31,10 +31,10 @@ import {
 } from "react-icons/si";
 import "./Stage.css";
 // Import des images du stage
-import configurateurInterfaceClient from "../../Assets/stage/configurateur-interface-client.png";
-import configurateurAdmin from "../../Assets/stage/configurateur-admin.png";
-import wixAvantApres from "../../Assets/stage/wix-avant-apres.png";
-import entreprise from "../../Assets/stage/entreprise.png";
+import configurateurInterfaceClient from "../../Assets/img_stage/configurateur-interface-client.png";
+import configurateurAdmin from "../../Assets/img_stage/configurateur-admin.png";
+import wixAvantApres from "../../Assets/img_stage/wix-avant-apres.png";
+import entreprise from "../../Assets/img_stage/entreprise.png";
 
 const stageInfo = {
   entreprise: "La Bicoque Atelier",
@@ -226,7 +226,7 @@ function Stage() {
 
       <Container className="stage-content">
         <header className="stage-header">
-          <p className="stage-eyebrow">Stage BTS SIO SLAM</p>
+          <p className="stage-eyebrow">Stage de 1ère année de BTS SIO</p>
           <h1 className="project-heading">
             Stage chez <span className="purple">{stageInfo.entreprise}</span>
           </h1>

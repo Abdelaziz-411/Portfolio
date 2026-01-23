@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import NavDropdown from "react-bootstrap/NavDropdown";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
 import Button from "react-bootstrap/Button";
@@ -94,23 +95,22 @@ function NavBar() {
             </Nav.Item>
 
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/stage"
-                onClick={() => updateExpanded(false)}
-              >
-                <FaGraduationCap style={{ marginBottom: "2px" }} /> Stage
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                href="https://www.labicoqueatelier.fr/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Entreprise
-              </Nav.Link>
+              <NavDropdown title="Stage" id="nav-stage-dropdown">
+                <NavDropdown.Item
+                  as={Link}
+                  to="/stage"
+                  onClick={() => updateExpanded(false)}
+                >
+                  1ère année
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={Link}
+                  to="/stage/current"
+                  onClick={() => updateExpanded(false)}
+                >
+                  2ème année
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
