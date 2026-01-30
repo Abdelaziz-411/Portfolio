@@ -25,18 +25,20 @@ import {
   SiMysql,
   SiBootstrap,
   SiJavascript,
-  SiGithub
+  SiGithub,
+  SiAdobeacrobatreader
 } from "react-icons/si";
 import "./Stage.css";
 
 import imgAide from "../../Assets/img_stage/aide_a_la_personne.png";
 import imgN8n from "../../Assets/img_stage/n8n.png";
 import imgDevis from "../../Assets/img_stage/devis_images.png";
+import imgFactures from "../../Assets/img_stage/Gestion de factures.png";
 
 import cdcServices from "../../Assets/cdc stage/Tache_Redaction_Integration_Web_Services_a_la_personne.pdf";
 import cdcN8n from "../../Assets/cdc stage/Workflow_n8n.pdf";
 import cdcDevis from "../../Assets/cdc stage/devis dynamique avec gestion d’images.pdf";
-import cdcInternal from "../../Assets/cdc stage/Application de gestion des demandes internes.pdf";
+import cdcFactures from "../../Assets/cdc stage/Gestion de factures Web  PDF.pdf";
 
 const stageInfo = {
   entreprise: "Nanika Le Mans",
@@ -69,6 +71,7 @@ const outilsAvecIcones = [
   { nom: "Bootstrap", icon: SiBootstrap },
   { nom: "JavaScript", icon: SiJavascript },
   { nom: "GitHub", icon: SiGithub },
+  { nom: "PDF", icon: SiAdobeacrobatreader },
   { nom: "n8n (Automatisation)", icon: FaCogs }
 ];
 
@@ -85,7 +88,7 @@ function StageCurrent() {
           <h1 className="project-heading">
             Stage chez <span className="purple">{stageInfo.entreprise}</span>
           </h1>
-          <p className="stage-subtitle">Application web de gestion de projets et composants réutilisables</p>
+          <p className="stage-subtitle">Gestionnaire de Factures Web + PDF</p>
 
           <div className="stage-meta">
             <div className="stage-meta-item">
@@ -387,7 +390,7 @@ function StageCurrent() {
                   <div className="stage-card-title">
                     <FaCode className="stage-card-icon" />
                     <div>
-                      <h3>Demandes internes</h3>
+                      <h3>Gestionnaire de Factures</h3>
                       <div className="tech-badges">
                         <span className="tech-badge">PHP</span>
                         <span className="tech-badge">MySQL</span>
@@ -399,10 +402,10 @@ function StageCurrent() {
                   </div>
                 </div>
                 <div className="stage-card-body">
+                  <img src={imgFactures} alt="Gestionnaire de Factures" className="img-fluid" style={{ borderRadius: 12, marginBottom: 16 }} />
                   <h5>Contexte & description</h5>
                   <p>
-                    Application en cours de réalisation pour centraliser la création, l’affectation et le suivi des demandes internes.
-                    Système de rôles, vues filtrées et notifications prévues. Les visuels et étapes détaillées seront ajoutés dans une page dédiée.
+                    Développement d’une application web simple de création et gestion de factures avec export PDF
                   </p>
 
                   <div className="stage-block">
@@ -410,14 +413,17 @@ function StageCurrent() {
                     <ul className="stage-list">
                       <li><FaListAlt className="list-icon" /><span>PHP</span></li>
                       <li><FaListAlt className="list-icon" /><span>MySQL</span></li>
+                      <li><FaListAlt className="list-icon" /><span>Bibliothèque PDF (Dompdf)</span></li>
                       <li><FaListAlt className="list-icon" /><span>Bootstrap</span></li>
+                      <li><FaListAlt className="list-icon" /><span>JavaScript</span></li>
+                      <li><FaListAlt className="list-icon" /><span>GitHub</span></li>
                     </ul>
                   </div>
 
                   <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                     <Button
                       variant="outline-primary"
-                      href={cdcInternal}
+                      href={cdcFactures}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -425,7 +431,7 @@ function StageCurrent() {
                     </Button>
                     <Button
                       as={Link}
-                      to="/stage/internal-requests"
+                      to="/stage/invoice-manager"
                       variant="outline-secondary"
                     >
                       Voir la page détails

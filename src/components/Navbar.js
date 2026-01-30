@@ -16,7 +16,9 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { FaGraduationCap } from "react-icons/fa";
+import { FaGraduationCap, FaFilePdf } from "react-icons/fa";
+
+import skillsTable from "../Assets/Compétences_BTS_Abdelaziz.pdf";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -116,6 +118,16 @@ function NavBar() {
                   onClick={() => updateExpanded(false)}
                 >
                   2ème année
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item
+                  href={skillsTable}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => updateExpanded(false)}
+                >
+                  <FaFilePdf style={{ marginBottom: "2px", marginRight: "5px" }} />
+                  Tableau de compétences
                 </NavDropdown.Item>
                 
               </NavDropdown>
