@@ -34,11 +34,13 @@ import imgAide from "../../Assets/img_stage/aide_a_la_personne.png";
 import imgN8n from "../../Assets/img_stage/n8n.png";
 import imgDevis from "../../Assets/img_stage/devis_images.png";
 import imgFactures from "../../Assets/img_stage/Gestion de factures.png";
+import imgTickets from "../../Assets/img_stage/GestionDeTickets.png";
 
 import cdcServices from "../../Assets/cdc stage/Tache_Redaction_Integration_Web_Services_a_la_personne.pdf";
 import cdcN8n from "../../Assets/cdc stage/Workflow_n8n.pdf";
 import cdcDevis from "../../Assets/cdc stage/devis dynamique avec gestion d’images.pdf";
 import cdcFactures from "../../Assets/cdc stage/Gestion de factures Web  PDF.pdf";
+import cdcTickets from "../../Assets/cdc stage/Gestion de Tickets.pdf";
 
 const stageInfo = {
   entreprise: "Nanika Le Mans",
@@ -339,6 +341,7 @@ function StageCurrent() {
                       <div className="tech-badges">
                         <span className="tech-badge">n8n</span>
                         <span className="tech-badge">APIs</span>
+                        <span className="tech-badge">Hostinger</span>
                         <span className="tech-badge">Webhooks</span>
                       </div>
                     </div>
@@ -356,8 +359,8 @@ function StageCurrent() {
                   <div className="stage-block">
                     <h6><FaTools className="section-icon" /> Outils utilisés</h6>
                     <ul className="stage-list">
-                      <li><FaListAlt className="list-icon" /><span>n8n</span></li>
-                      <li><FaListAlt className="list-icon" /><span>APIs REST</span></li>
+                      <li><FaListAlt className="list-icon" /><span>n8n hébérgé avec Hostinger</span></li>
+                      <li><FaListAlt className="list-icon" /><span>APIs REST (Google Cloud, OpenAI, etc..)</span></li>
                       <li><FaListAlt className="list-icon" /><span>Webhooks</span></li>
                     </ul>
                   </div>
@@ -390,6 +393,71 @@ function StageCurrent() {
                   <div className="stage-card-title">
                     <FaCode className="stage-card-icon" />
                     <div>
+                      <h3>Gestion de Tickets</h3>
+                      <div className="tech-badges">
+                        <span className="tech-badge">PHP</span>
+                        <span className="tech-badge">MySQL</span>
+                        <span className="tech-badge">JavaScript</span>
+                        <span className="tech-badge">Bootstrap</span>
+                        <span className="tech-badge">GitHub</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="stage-card-body">
+                  <img src={imgTickets} alt="Gestion de Tickets" className="img-fluid" style={{ borderRadius: 12, marginBottom: 16 }} />
+                  <h5>Contexte & description</h5>
+                  <p>
+                    Développement d’une application de support client permettant de centraliser les demandes de tickets.
+                  </p>
+
+                  <div className="stage-block">
+                    <h6><FaTools className="section-icon" /> Outils utilisés</h6>
+                    <ul className="stage-list">
+                      <li><FaListAlt className="list-icon" /><span>PHP</span></li>
+                      <li><FaListAlt className="list-icon" /><span>MySQL</span></li>
+                      <li><FaListAlt className="list-icon" /><span>Bootstrap</span></li>
+                      <li><FaListAlt className="list-icon" /><span>JavaScript</span></li>
+                      <li><FaListAlt className="list-icon" /><span>GitHub</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="stage-block">
+                    <h6><FaCheckCircle className="section-icon" /> Résultats concrets</h6>
+                    <ul className="stage-list">
+                      <li><FaChartLine className="list-icon" /><span>Centralisation efficace des demandes support</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Amélioration du temps de réponse technique</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Historisation complète des échanges clients</span></li>
+                    </ul>
+                  </div>
+
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    <Button
+                      variant="outline-primary"
+                      href={cdcTickets}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaFilePdf style={{ marginBottom: 2 }} /> &nbsp; Voir le CDC
+                    </Button>
+                    <Button
+                      as={Link}
+                      to="/stage/ticket-manager"
+                      variant="outline-secondary"
+                    >
+                      Voir la page détails
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
+            <Col md={12} className="stage-panel">
+              <div className="stage-mission-card mission-card stage-card-view">
+                <div className="stage-card-header">
+                  <div className="stage-card-title">
+                    <FaCode className="stage-card-icon" />
+                    <div>
                       <h3>Gestionnaire de Factures</h3>
                       <div className="tech-badges">
                         <span className="tech-badge">PHP</span>
@@ -417,6 +485,15 @@ function StageCurrent() {
                       <li><FaListAlt className="list-icon" /><span>Bootstrap</span></li>
                       <li><FaListAlt className="list-icon" /><span>JavaScript</span></li>
                       <li><FaListAlt className="list-icon" /><span>GitHub</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="stage-block">
+                    <h6><FaCheckCircle className="section-icon" /> Résultats concrets</h6>
+                    <ul className="stage-list">
+                      <li><FaChartLine className="list-icon" /><span>Génération automatisée de factures professionnelles</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Calculs de TVA et totaux sans erreur humaine</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Suivi précis des paiements clients</span></li>
                     </ul>
                   </div>
 

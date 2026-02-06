@@ -8,6 +8,7 @@ import ProjectDetails from "./components/Projects/ProjectDetails";
 import Stage from "./components/Stage/Stage";
 import StageCurrent from "./components/Stage/StageCurrent";
 import InvoiceManagerDetails from "./components/Stage/InvoiceManagerDetails";
+import TicketManagerDetails from "./components/Stage/TicketManagerDetails";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Particle from "./components/Particle";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/stage" element={<Stage />} />
           <Route path="/stage/current" element={<StageCurrent />} />
           <Route path="/stage/invoice-manager" element={<InvoiceManagerDetails />} />
+          <Route path="/stage/ticket-manager" element={<TicketManagerDetails />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
