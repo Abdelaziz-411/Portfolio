@@ -35,6 +35,7 @@ import imgN8n from "../../Assets/img_stage/n8n.png";
 import imgDevis from "../../Assets/img_stage/devis_images.png";
 import imgFactures from "../../Assets/img_stage/Gestion de factures.png";
 import imgTickets from "../../Assets/img_stage/GestionDeTickets.png";
+import logoNanika from "../../Assets/img_stage/nanika-logo.jpg";
 
 import cdcServices from "../../Assets/cdc stage/Tache_Redaction_Integration_Web_Services_a_la_personne.pdf";
 import cdcN8n from "../../Assets/cdc stage/Workflow_n8n.pdf";
@@ -135,6 +136,19 @@ function StageCurrent() {
           <Col md={6} className="stage-panel">
             <div className="stage-card-shell">
               <h3 className="stage-block-title">Présentation de l'entreprise</h3>
+              <div style={{ textAlign: "center", marginBottom: "20px" }}>
+                <img 
+                  src={logoNanika} 
+                  alt="Nanika Logo" 
+                  className="img-fluid" 
+                  style={{ 
+                    maxHeight: "100px", 
+                    borderRadius: "8px",
+                    boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+                    border: "2px solid rgba(178, 121, 216, 0.3)"
+                  }} 
+                />
+              </div>
               <ul className="stage-list">
                 <li>
                   <FaBullseye className="list-icon" />
