@@ -577,46 +577,97 @@ function StageCurrent() {
         <section className="stage-section-card">
           <div className="stage-section-header">
             <div>
-              <h2 className="stage-section-title">Compétences mobilisées (justifiées par mission)</h2>
+              <h2 className="stage-section-title">
+                Compétences mobilisées (justifiées par mission)
+              </h2>
+              <p className="stage-section-subtitle">
+                Stage 2ᵉ année — 06/01/2026 → 20/02/2026
+              </p>
             </div>
           </div>
-          {[
-            { code: "B1.3.1", intitule: "Participer à la valorisation de l’image de l’organisation", mission: "Rédaction & intégration (services à la personne)" },
-            { code: "B1.3.3", intitule: "Participer à l’évolution d’un site Web exploitant les données de l’organisation", mission: "Rédaction & intégration (services à la personne)" },
-            { code: "B2.2", intitule: "Exploiter les technologies Web pour mettre en œuvre les échanges entre applications", mission: "Automatisation (n8n, APIs, webhooks)" },
-            { code: "B1.2.3", intitule: "Collecter, suivre et orienter des demandes", mission: "Automatisation (n8n, routage de tâches)" },
-            { code: "B2.3", intitule: "Concevoir ou adapter une base de données", mission: "Devis dynamique (modélisation et stockage)" },
-            { code: "B2.2", intitule: "Utiliser des composants d’accès aux données", mission: "Devis dynamique (CRUD et calculs)" },
-            { code: "B1.4.1", intitule: "Analyser les objectifs et les modalités d’organisation d'un projet", mission: "Demandes internes (analyse et cadrage)" },
-            { code: "B1.4.2", intitule: "Planifier les activités", mission: "Demandes internes (planification et suivi)" },
-            { code: "B3.3", intitule: "Gérer les accès et les privilèges appropriés", mission: "Demandes internes (rôles et permissions)" }
-          ].length > 0 && (
-            <div className="competence-table">
-              <div className="competence-row competence-header">
-                <span>Code</span>
-                <span>Intitulé du référentiel</span>
-                <span>Mission associée</span>
+
+          {(() => {
+            const referentiel = {
+              "1.1": "Recenser et identifier les ressources numériques",
+              "1.2": "Exploiter des référentiels, normes et standards adoptés par le prestataire informatique",
+              "1.3": "Mettre en place et vérifier les niveaux d’habilitation associés à un service",
+              "1.4": "Vérifier les conditions de la continuité d’un service informatique",
+              "1.5": "Gérer des sauvegardes",
+              "1.6": "Vérifier le respect des règles d’utilisation des ressources numériques",
+              "2.1": "Collecter, suivre et orienter des demandes",
+              "2.2": "Traiter des demandes concernant les services réseau et système, applicatifs",
+              "2.3": "Traiter des demandes concernant les applications",
+              "3.3": "Participer à l’évolution d’un site Web exploitant les données de l’organisation",
+              "4.1": "Analyser les objectifs et les modalités d’organisation d’un projet",
+              "4.2": "Planifier les activités",
+              "4.3": "Évaluer les indicateurs de suivi d’un projet et analyser les écarts",
+              "5.1": "Réaliser les tests d’intégration et d’acceptation d’un service",
+              "5.2": "Déployer un service",
+              "5.3": "Accompagner les utilisateurs dans la mise en place d’un service",
+              "6.1": "Mettre en place son environnement d’apprentissage personnel",
+              "6.2": "Mettre en œuvre des outils et stratégies de veille informationnelle",
+              "6.4": "Développer son projet professionnel"
+            };
+
+            // Groupé par mission (lisible)
+            const missions = [
+              {
+                title: "Automatisation vidéos IA (n8n / APIs / webhooks)",
+                description:
+                  "Conception et orchestration de workflows n8n : appels API, webhooks, génération de contenu, publication et suivi.",
+                items: ["4.1", "4.3", "6.2", "1.2", "3.3", "5.2", "1.3", "1.6", "2.2", "2.1", "5.1"]
+              },
+              {
+                title: "Application web — Gestion de factures (Web + PDF)",
+                description:
+                  "Développement d’un outil de création/gestion de factures : TVA 0%/20%, statuts payée/impayée, export PDF, indicateurs.",
+                items: ["4.1", "4.2", "4.3", "1.2", "1.1", "2.3", "3.3", "5.1", "5.2", "5.3", "6.1", "6.4", "1.4", "1.6", "2.2", "2.1", "1.5"]
+              },
+              {
+                title: "Application web — Gestion des travaux / tickets (type demandes internes)",
+                description:
+                  "Mise en place d’une application de suivi : demandes, statuts, droits, historisation, suivi et indicateurs.",
+                items: ["4.1", "4.2", "4.3", "1.2", "1.1", "2.1", "2.2", "2.3", "3.3", "5.1", "5.2", "5.3", "1.3", "1.4", "1.6", "1.5", "6.4"]
+              }
+            ];
+
+            // Sécurise l'affichage : dédoublonne chaque liste et trie par code (optionnel)
+            const normalize = (arr) =>
+              Array.from(new Set(arr)).sort((a, b) => {
+                const [a1, a2 = "0"] = a.split(".").map(Number);
+                const [b1, b2 = "0"] = b.split(".").map(Number);
+                return a1 !== b1 ? a1 - b1 : a2 - b2;
+              });
+
+            return (
+              <div className="competence-missions">
+                {missions.map((m) => {
+                  const codes = normalize(m.items);
+
+                  return (
+                    <div className="competence-mission-card" key={m.title}>
+                      <div className="competence-mission-head">
+                        <h3 className="competence-mission-title">{m.title}</h3>
+                        <p className="competence-mission-desc">{m.description}</p>
+                      </div>
+
+                      <ul className="competence-list">
+                        {codes.map((code) => (
+                          <li className="competence-item" key={`${m.title}-${code}`}>
+                            <span className="competence-pill">{code}</span>
+                            <span className="competence-label">{referentiel[code] ?? "—"}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                })}
               </div>
-              {[
-                { code: "B1.3.1", intitule: "Participer à la valorisation de l’image de l’organisation", mission: "Rédaction & intégration (services à la personne)" },
-                { code: "B1.3.3", intitule: "Participer à l’évolution d’un site Web exploitant les données de l’organisation", mission: "Rédaction & intégration (services à la personne)" },
-                { code: "B2.2", intitule: "Exploiter les technologies Web pour mettre en œuvre les échanges entre applications", mission: "Automatisation (n8n, APIs, webhooks)" },
-                { code: "B1.2.3", intitule: "Collecter, suivre et orienter des demandes", mission: "Automatisation (n8n, routage de tâches)" },
-                { code: "B2.3", intitule: "Concevoir ou adapter une base de données", mission: "Devis dynamique (modélisation et stockage)" },
-                { code: "B2.2", intitule: "Utiliser des composants d’accès aux données", mission: "Devis dynamique (CRUD et calculs)" },
-                { code: "B1.4.1", intitule: "Analyser les objectifs et les modalités d’organisation d'un projet", mission: "Demandes internes (analyse et cadrage)" },
-                { code: "B1.4.2", intitule: "Planifier les activités", mission: "Demandes internes (planification et suivi)" },
-                { code: "B3.3", intitule: "Gérer les accès et les privilèges appropriés", mission: "Demandes internes (rôles et permissions)" }
-              ].map((c) => (
-                <div className="competence-row" key={c.code}>
-                  <span className="competence-code">{c.code}</span>
-                  <span>{c.intitule}</span>
-                  <span className="competence-mission">{c.mission}</span>
-                </div>
-              ))}
-            </div>
-          )}
+            );
+          })()}
         </section>
+
+
       </Container>
     </Container>
   );
