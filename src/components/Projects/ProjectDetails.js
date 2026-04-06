@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import Particle from "../Particle";
 import { projects } from "../../Constants/projectData";
 import { AiFillGithub } from "react-icons/ai";
 import { SiGitlab } from "react-icons/si";
@@ -13,7 +12,6 @@ function ProjectDetails() {
   if (!project) {
     return (
       <Container fluid className="project-section">
-        <Particle />
         <Container>
           <h1 className="project-heading">Projet non trouvé</h1>
         </Container>
@@ -23,7 +21,6 @@ function ProjectDetails() {
 
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           {project.title}

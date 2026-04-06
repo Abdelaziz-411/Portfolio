@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Modal } from "react-bootstrap";
-import Particle from "../Particle";
 import { FaFilePdf, FaCheckCircle, FaDatabase, FaServer, FaWindowMaximize, FaCogs, FaSearchPlus } from "react-icons/fa";
 import cdcTickets from "../../Assets/cdc stage/Gestion de Tickets.pdf";
 import imgTickets from "../../Assets/img_stage/GestionDeTickets.png";
@@ -14,7 +13,6 @@ function TicketManagerDetails() {
 
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           Projet – <strong className="purple">Gestion de Tickets</strong> (Support Client)

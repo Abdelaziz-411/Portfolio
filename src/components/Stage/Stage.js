@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col, Badge } from "react-bootstrap";
-import Particle from "../Particle";
 import {
   FaBuilding,
   FaCalendarAlt,
@@ -220,10 +219,6 @@ const competences = [
 function Stage() {
   return (
     <Container fluid className="stage-section">
-      <div className="stage-particles-bg">
-        <Particle />
-      </div>
-
       <Container className="stage-content">
         <header className="stage-header">
           <p className="stage-eyebrow">Stage de 1ère année de BTS SIO</p>

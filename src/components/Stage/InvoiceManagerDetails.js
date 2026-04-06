@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Button, Modal } from "react-bootstrap";
-import Particle from "../Particle";
 import { FaFilePdf, FaCheckCircle, FaDatabase, FaServer, FaWindowMaximize, FaFileExport, FaSearchPlus } from "react-icons/fa";
 import cdcFactures from "../../Assets/cdc stage/Gestion de factures Web  PDF.pdf";
 import imgFactures from "../../Assets/img_stage/Gestion de factures.png";
@@ -14,7 +13,6 @@ function InvoiceManagerDetails() {
 
   return (
     <Container fluid className="project-section">
-      <Particle />
       <Container>
         <h1 className="project-heading">
           Projet – <strong className="purple">Gestion de factures</strong> (Web + PDF)

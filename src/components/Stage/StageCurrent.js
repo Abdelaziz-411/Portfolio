@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Particle from "../Particle";
 import {
   FaBuilding,
   FaCalendarAlt,
@@ -81,10 +80,6 @@ const outilsAvecIcones = [
 function StageCurrent() {
   return (
     <Container fluid className="stage-section">
-      <div className="stage-particles-bg">
-        <Particle />
-      </div>
-
       <Container className="stage-content">
         <header className="stage-header">
           <p className="stage-eyebrow">Stage de 2ème année de BTS SIO</p>
@@ -615,19 +610,19 @@ function StageCurrent() {
                 title: "Automatisation vidéos IA (n8n / APIs / webhooks)",
                 description:
                   "Conception et orchestration de workflows n8n : appels API, webhooks, génération de contenu, publication et suivi.",
-                items: ["4.1", "4.3", "6.2", "1.2", "3.3", "5.2", "1.3", "1.6", "2.2", "2.1", "5.1"]
+                items: ["1.1", "4.1", "4.3", "1.2", "5.2", "1.3", "1.6", "2.1", "5.1"]
               },
               {
                 title: "Application web — Gestion de factures (Web + PDF)",
                 description:
                   "Développement d’un outil de création/gestion de factures : TVA 0%/20%, statuts payée/impayée, export PDF, indicateurs.",
-                items: ["4.1", "4.2", "4.3", "1.2", "1.1", "2.3", "3.3", "5.1", "5.2", "5.3", "6.1", "6.4", "1.4", "1.6", "2.2", "2.1", "1.5"]
+                items: ["4.1", "4.2", "4.3", "1.2", "2.3", "5.1", "5.2", "5.3", "6.4", "2.1", "1.5"]
               },
               {
                 title: "Application web — Gestion des travaux / tickets (type demandes internes)",
                 description:
                   "Mise en place d’une application de suivi : demandes, statuts, droits, historisation, suivi et indicateurs.",
-                items: ["4.1", "4.2", "4.3", "1.2", "1.1", "2.1", "2.2", "2.3", "3.3", "5.1", "5.2", "5.3", "1.3", "1.4", "1.6", "1.5", "6.4"]
+                items: ["4.1", "1.2", "2.1", "2.3", "5.2", "1.3", "1.5"]
               }
             ];
 

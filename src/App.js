@@ -9,6 +9,7 @@ import Stage from "./components/Stage/Stage";
 import StageCurrent from "./components/Stage/StageCurrent";
 import InvoiceManagerDetails from "./components/Stage/InvoiceManagerDetails";
 import TicketManagerDetails from "./components/Stage/TicketManagerDetails";
+import AIDevPage from "./components/Veille/AIDevPage";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import Particle from "./components/Particle";
@@ -51,6 +52,7 @@ function App() {
           <Route path="/stage/current" element={<StageCurrent />} />
           <Route path="/stage/invoice-manager" element={<InvoiceManagerDetails />} />
           <Route path="/stage/ticket-manager" element={<TicketManagerDetails />} />
+          <Route path="/veille/ia" element={<AIDevPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
