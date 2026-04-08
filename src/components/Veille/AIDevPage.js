@@ -12,6 +12,7 @@ import {
   FaLightbulb,
   FaArrowRight,
   FaChartLine,
+  FaTerminal,
 } from "react-icons/fa";
 import {
   SiVisualstudiocode,
@@ -72,12 +73,6 @@ function AIDevPage() {
             Une exploration de la transformation profonde du métier de développeur, 
             propulsée par l'avènement des IDE intelligents et des agents autonomes.
           </p>
-          <div style={{ marginTop: "30px" }}>
-            <Badge pill style={badgeStyle}>#IAGénérative</Badge>
-            <Badge pill style={badgeStyle}>#LLM</Badge>
-            <Badge pill style={badgeStyle}>#IDEPilote</Badge>
-            <Badge pill style={badgeStyle}>#Productivité</Badge>
-          </div>
         </div>
 
         {/* Problématique */}
@@ -133,7 +128,7 @@ function AIDevPage() {
           <Col lg={6}>
             <div style={cardStyle}>
               <h2 style={titlePurple}>
-                <FaRobot /> IDE IA-Natives
+                <FaRobot /> Outils IA-Natives & Agents
               </h2>
               <ul className="stage-list" style={{ marginTop: "20px" }}>
                 <li style={{ borderBottom: "1px solid rgba(178, 121, 216, 0.2)", padding: "15px 0" }}>
@@ -144,6 +139,18 @@ function AIDevPage() {
                       <p style={{ ...textLight, margin: "5px 0 0" }}>
                         Conçu autour du LLM. Capable de modifier plusieurs fichiers à la fois 
                         et de comprendre l'ensemble du codebase nativement.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li style={{ borderBottom: "1px solid rgba(178, 121, 216, 0.2)", padding: "15px 0" }}>
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: "15px" }}>
+                    <FaTerminal style={{ color: "#E0E0E0", fontSize: "2rem", minWidth: "40px" }} />
+                    <div>
+                      <strong className="purple">Claude Code (Anthropic)</strong>
+                      <p style={{ ...textLight, margin: "5px 0 0" }}>
+                        Outil CLI agentique qui permet de coder, tester et exécuter des commandes 
+                        directement depuis le terminal.
                       </p>
                     </div>
                   </div>
@@ -192,7 +199,7 @@ function AIDevPage() {
                 </tr>
                 <tr style={{ background: "rgba(199, 112, 240, 0.1)" }}>
                   <td style={{ fontWeight: "bold" }}>Agentique (2024+)</td>
-                  <td>Cursor, Devin, Agents</td>
+                  <td>Cursor, Claude Code, Agents</td>
                   <td>Architecte, Chef d'orchestre, Validateur</td>
                 </tr>
               </tbody>
@@ -262,6 +269,9 @@ function AIDevPage() {
             <SiGithub /> Sources de Veille
           </h2>
           <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "20px", marginTop: "20px" }}>
+            <div style={{ padding: "10px 20px", border: "1px solid rgba(178, 121, 216, 0.3)", borderRadius: "10px" }}>
+              <FaRobot style={{ marginRight: "10px" }} /> Anthropic Dev Blog
+            </div>
             <div style={{ padding: "10px 20px", border: "1px solid rgba(178, 121, 216, 0.3)", borderRadius: "10px" }}>
               <SiOpenai style={{ marginRight: "10px" }} /> OpenAI Dev Blog
             </div>

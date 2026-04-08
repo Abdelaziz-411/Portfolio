@@ -3,8 +3,59 @@ import configurateur from "../Assets/img_projects/configurateur.png";
 import marronWeb from "../Assets/img_projects/marronWeb.png";
 import accueilMobile from "../Assets/img_projects/accueilMobile.jpg";
 import usersMobile from "../Assets/img_projects/usersMobile.jpg";
+import workflowN8n from "../Assets/img_stage/n8n.png";
+import gestionTickets from "../Assets/img_stage/GestionDeTickets.png";
+import gestionFactures from "../Assets/img_stage/Gestion de factures.png";
 
 export const projects = [
+  {
+    id: "stage-n8n",
+    title: "Automatisation des Workflows (n8n)",
+    description:
+      "Projet realise durant le stage de 2eme annee chez Nanika Le Mans. Mise en place de workflows d'automatisation avec n8n pour orchestrer des taches recurrentes, connecter des APIs REST et exploiter des webhooks. L'objectif etait de reduire les manipulations manuelles, fiabiliser les traitements et assurer un meilleur suivi des executions.",
+    imgPath: workflowN8n,
+    skills: [
+      "4.1 : Analyser les objectifs et les modalites d'organisation d'un projet",
+      "4.3 : Evaluer les indicateurs de suivi d'un projet et analyser les ecarts",
+      "1.2 : Exploiter des referentiels, normes et standards adoptes par le prestataire informatique",
+      "2.1 : Collecter, suivre et orienter des demandes",
+      "5.1 : Realiser les tests d'integration et d'acceptation d'un service",
+      "5.2 : Deployer un service"
+    ]
+  },
+  {
+    id: "stage-ticket-manager",
+    title: "Gestion de Tickets",
+    description:
+      "Application web developpee durant le stage de 2eme annee pour centraliser les demandes de support client. Le projet permet de creer et suivre des tickets, gerer les statuts, historiser les echanges et structurer le traitement des demandes. Technologies utilisees : PHP, MySQL, JavaScript, Bootstrap et GitHub.",
+    imgPath: gestionTickets,
+    skills: [
+      "4.1 : Analyser les objectifs et les modalites d'organisation d'un projet",
+      "4.2 : Planifier les activites",
+      "2.1 : Collecter, suivre et orienter des demandes",
+      "2.2 : Traiter des demandes concernant les services reseau et systeme, applicatifs",
+      "2.3 : Traiter des demandes concernant les applications",
+      "3.3 : Participer a l'evolution d'un site Web exploitant les donnees de l'organisation",
+      "5.1 : Realiser les tests d'integration et d'acceptation d'un service",
+      "5.2 : Deployer un service"
+    ]
+  },
+  {
+    id: "stage-invoice-manager",
+    title: "Gestionnaire de Factures",
+    description:
+      "Application web realisee durant le stage de 2eme annee pour creer, gerer et exporter des factures au format PDF. Le projet comprend la gestion de la TVA, des statuts de paiement, des totaux automatiques et la generation de documents professionnels. Technologies utilisees : PHP, MySQL, JavaScript, Bootstrap et Dompdf.",
+    imgPath: gestionFactures,
+    skills: [
+      "4.1 : Analyser les objectifs et les modalites d'organisation d'un projet",
+      "2.3 : Traiter des demandes concernant les applications",
+      "3.3 : Participer a l'evolution d'un site Web exploitant les donnees de l'organisation",
+      "5.1 : Realiser les tests d'integration et d'acceptation d'un service",
+      "5.2 : Deployer un service",
+      "5.3 : Accompagner les utilisateurs dans la mise en place d'un service",
+      "1.5 : Gerer des sauvegardes"
+    ]
+  },
   {
     id: "event-manager",
     title: "Gestion d'Événements",

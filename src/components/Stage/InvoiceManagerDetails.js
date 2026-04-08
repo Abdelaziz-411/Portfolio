@@ -167,9 +167,19 @@ function InvoiceManagerDetails() {
                 href={cdcFactures}
                 target="_blank"
                 rel="noreferrer"
-                style={{ padding: "10px 30px", fontSize: "1.1em" }}
+                style={{ padding: "10px 30px", fontSize: "1.1em", marginBottom: "16px" }}
               >
                 <FaFilePdf style={{ marginBottom: 2 }} /> &nbsp; Télécharger le CDC Complet
+              </Button>
+              <br />
+              <Button
+                variant="outline-light"
+                href="https://unrodded-cuc-brickred.ngrok-free.dev/GestionDeFactures/public/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ padding: "10px 30px", fontSize: "1.1em" }}
+              >
+                Accéder à l'application de gestion de factures
               </Button>
             </div>
           </Col>
