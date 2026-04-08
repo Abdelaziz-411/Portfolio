@@ -199,8 +199,13 @@ function AIDevPage() {
                 </tr>
                 <tr style={{ background: "rgba(199, 112, 240, 0.1)" }}>
                   <td style={{ fontWeight: "bold" }}>Agentique (2024+)</td>
-                  <td>Cursor, Claude Code, Agents</td>
+                  <td>Cursor, Trae</td>
                   <td>Architecte, Chef d'orchestre, Validateur</td>
+                </tr>
+                <tr>
+                  <td style={{ fontWeight: "bold" }}>Hybride (2026+)</td>
+                  <td>Claude Code</td>
+                  <td>Collaboration avec des agents IA, supervision stratégique</td>
                 </tr>
               </tbody>
             </Table>
