@@ -340,6 +340,72 @@ function StageCurrent() {
               </div>
             </Col>
 
+            <Col md={12} className="stage-panel">
+              <div className="stage-mission-card mission-card stage-card-view">
+                <div className="stage-card-header">
+                  <div className="stage-card-title">
+                    <FaCode className="stage-card-icon" />
+                    <div>
+                      <h3>Gestionnaire de Factures</h3>
+                      <div className="tech-badges">
+                        <span className="tech-badge">PHP</span>
+                        <span className="tech-badge">MySQL</span>
+                        <span className="tech-badge">JavaScript</span>
+                        <span className="tech-badge">Bootstrap</span>
+                        <span className="tech-badge">GitHub</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="stage-card-body">
+                  <img src={imgFactures} alt="Gestionnaire de Factures" className="img-fluid" style={{ borderRadius: 12, marginBottom: 16 }} />
+                  <h5>Contexte & description</h5>
+                  <p>
+                    Développement d’une application web simple de création et gestion de factures avec export PDF
+                  </p>
+
+                  <div className="stage-block">
+                    <h6><FaTools className="section-icon" /> Outils utilisés</h6>
+                    <ul className="stage-list">
+                      <li><FaListAlt className="list-icon" /><span>PHP</span></li>
+                      <li><FaListAlt className="list-icon" /><span>MySQL</span></li>
+                      <li><FaListAlt className="list-icon" /><span>Bibliothèque PDF (Dompdf)</span></li>
+                      <li><FaListAlt className="list-icon" /><span>Bootstrap</span></li>
+                      <li><FaListAlt className="list-icon" /><span>JavaScript</span></li>
+                      <li><FaListAlt className="list-icon" /><span>GitHub</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="stage-block">
+                    <h6><FaCheckCircle className="section-icon" /> Résultats concrets</h6>
+                    <ul className="stage-list">
+                      <li><FaChartLine className="list-icon" /><span>Génération automatisée de factures professionnelles</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Calculs de TVA et totaux sans erreur humaine</span></li>
+                      <li><FaChartLine className="list-icon" /><span>Suivi précis des paiements clients</span></li>
+                    </ul>
+                  </div>
+
+                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+                    <Button
+                      variant="outline-primary"
+                      href={cdcFactures}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <FaFilePdf style={{ marginBottom: 2 }} /> &nbsp; Voir le CDC
+                    </Button>
+                    <Button
+                      as={Link}
+                      to="/stage/invoice-manager"
+                      variant="outline-secondary"
+                    >
+                      Voir la page détails
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
             <Col md={6} className="stage-panel">
               <div className="stage-mission-card mission-card stage-card-view">
                 <div className="stage-card-header">
@@ -452,72 +518,6 @@ function StageCurrent() {
                     <Button
                       as={Link}
                       to="/stage/ticket-manager"
-                      variant="outline-secondary"
-                    >
-                      Voir la page détails
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </Col>
-
-            <Col md={12} className="stage-panel">
-              <div className="stage-mission-card mission-card stage-card-view">
-                <div className="stage-card-header">
-                  <div className="stage-card-title">
-                    <FaCode className="stage-card-icon" />
-                    <div>
-                      <h3>Gestionnaire de Factures</h3>
-                      <div className="tech-badges">
-                        <span className="tech-badge">PHP</span>
-                        <span className="tech-badge">MySQL</span>
-                        <span className="tech-badge">JavaScript</span>
-                        <span className="tech-badge">Bootstrap</span>
-                        <span className="tech-badge">GitHub</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="stage-card-body">
-                  <img src={imgFactures} alt="Gestionnaire de Factures" className="img-fluid" style={{ borderRadius: 12, marginBottom: 16 }} />
-                  <h5>Contexte & description</h5>
-                  <p>
-                    Développement d’une application web simple de création et gestion de factures avec export PDF
-                  </p>
-
-                  <div className="stage-block">
-                    <h6><FaTools className="section-icon" /> Outils utilisés</h6>
-                    <ul className="stage-list">
-                      <li><FaListAlt className="list-icon" /><span>PHP</span></li>
-                      <li><FaListAlt className="list-icon" /><span>MySQL</span></li>
-                      <li><FaListAlt className="list-icon" /><span>Bibliothèque PDF (Dompdf)</span></li>
-                      <li><FaListAlt className="list-icon" /><span>Bootstrap</span></li>
-                      <li><FaListAlt className="list-icon" /><span>JavaScript</span></li>
-                      <li><FaListAlt className="list-icon" /><span>GitHub</span></li>
-                    </ul>
-                  </div>
-
-                  <div className="stage-block">
-                    <h6><FaCheckCircle className="section-icon" /> Résultats concrets</h6>
-                    <ul className="stage-list">
-                      <li><FaChartLine className="list-icon" /><span>Génération automatisée de factures professionnelles</span></li>
-                      <li><FaChartLine className="list-icon" /><span>Calculs de TVA et totaux sans erreur humaine</span></li>
-                      <li><FaChartLine className="list-icon" /><span>Suivi précis des paiements clients</span></li>
-                    </ul>
-                  </div>
-
-                  <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                    <Button
-                      variant="outline-primary"
-                      href={cdcFactures}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaFilePdf style={{ marginBottom: 2 }} /> &nbsp; Voir le CDC
-                    </Button>
-                    <Button
-                      as={Link}
-                      to="/stage/invoice-manager"
                       variant="outline-secondary"
                     >
                       Voir la page détails
