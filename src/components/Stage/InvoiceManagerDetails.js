@@ -174,7 +174,7 @@ function InvoiceManagerDetails() {
               <br />
               <Button
                 variant="outline-light"
-                href="https://unrodded-cuc-brickred.ngrok-free.dev/GestionDeFactures/public/"
+                href="https://web.bts-malraux72.net/~abdelaziz.khalifa/GestionDeFactures/public/"
                 target="_blank"
                 rel="noreferrer"
                 style={{ padding: "10px 30px", fontSize: "1.1em" }}

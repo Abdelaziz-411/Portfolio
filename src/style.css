@@ -1,17 +1,20 @@
 html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+  --section-background-color: rgba(16, 11, 32, 0.904);
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+  --image-gradient: rgba(12, 8, 24, .904);
 
   --imp-text-color: #c770f0;
+}
+
+html, body {
+  min-height: 100%;
+  background: var(--section-background-color) !important;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body {
+  color: white;
 }
 
 .purple {
@@ -272,9 +275,7 @@ button:focus {
 .home-section {
   position: relative !important;
   z-index: 0 !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: var(--section-background-color) !important;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
@@ -339,10 +340,7 @@ button:focus {
   z-index: 1 !important;
   padding-bottom: 70px !important;
   padding-top: 70px !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg) !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+  background: var(--section-background-color) !important;
 }
 
 .home-about-description {
@@ -473,7 +471,7 @@ button:focus {
   z-index: 0 !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg) !important;
+  background: var(--section-background-color) !important;
 }
 
 .project-card {
@@ -572,7 +570,7 @@ button:focus {
   z-index: 0 !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg) !important;
+  background: var(--section-background-color) !important;
   color: white !important;
 }
 
@@ -604,6 +602,42 @@ button:focus {
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.7px solid rgba(200, 137, 230, 0.637);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 5px 8px rgba(89, 4, 168, 0.12);
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 500;
+  min-height: 46px;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: scale(1.02);
+  border-color: rgba(197, 115, 230, 0.883);
+}
+
+.tech-badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  width: 28px;
+  height: 28px;
+}
+
+.tech-badge-label {
+  white-space: nowrap;
+}
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -635,7 +669,7 @@ button:focus {
   z-index: 0 !important;
   padding-top: 110px !important;
   padding-bottom: 30px !important;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg) !important;
+  background: var(--section-background-color) !important;
   color: white !important;
 }
 
