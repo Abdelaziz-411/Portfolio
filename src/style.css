@@ -63,7 +63,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: linear-gradient(180deg, #2d1950 100%, #432e7c 100%);
 }
 
 /* Handle */
@@ -600,10 +600,10 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid rgba(208, 195, 212, 0.883) !important;
 }
 
-.tech-badge {
+.about-tech-badge {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -620,12 +620,12 @@ button:focus {
   transition: all 0.3s ease;
 }
 
-.tech-badge:hover {
+.about-tech-badge:hover {
   transform: scale(1.02);
   border-color: rgba(197, 115, 230, 0.883);
 }
 
-.tech-badge-icon {
+.about-tech-badge-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -634,7 +634,7 @@ button:focus {
   height: 28px;
 }
 
-.tech-badge-label {
+.about-tech-badge-label {
   white-space: nowrap;
 }
 

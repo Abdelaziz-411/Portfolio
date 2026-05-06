@@ -41,11 +41,11 @@ function Techstack() {
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       {techSkills.map(({ Icon, label, color }) => (
         <Col xs={12} sm={6} md={4} lg={3} className="mb-3" key={label}>
-          <div className="tech-badge">
-            <span className="tech-badge-icon" style={{ color }}>
+          <div className="about-tech-badge">
+            <span className="about-tech-badge-icon" style={{ color }}>
               <Icon />
             </span>
-            <span className="tech-badge-label">{label}</span>
+            <span className="about-tech-badge-label">{label}</span>
           </div>
         </Col>
       ))}
