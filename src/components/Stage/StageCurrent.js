@@ -616,7 +616,7 @@ function StageCurrent() {
                 title: "Application web — Gestion de factures (Web + PDF)",
                 description:
                   "Développement d’un outil de création/gestion de factures : TVA 0%/20%, statuts payée/impayée, export PDF, indicateurs.",
-                items: ["4.1", "4.2", "4.3", "2.3", "5.1", "5.2", "5.3", "6.4", "2.1"]
+                items: ["4.1", "4.2", "4.3", "2.3", "5.2", "6.4", "2.1"]
               },
               {
                 title: "Application web — Gestion des travaux / tickets (type demandes internes)",

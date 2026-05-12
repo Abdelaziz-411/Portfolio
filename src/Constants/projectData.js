@@ -46,6 +46,7 @@ export const projects = [
     description:
       "Application web realisee durant le stage de 2eme annee pour creer, gerer et exporter des factures au format PDF. Le projet comprend la gestion de la TVA, des statuts de paiement, des totaux automatiques et la generation de documents professionnels. Technologies utilisees : PHP, MySQL, JavaScript, Bootstrap et Dompdf.",
     imgPath: gestionFactures,
+    demoLink: "https://web.bts-malraux72.net/~abdelaziz.khalifa/GestionDeFactures/public/",
     skills: [
       "4.1 : Analyser les objectifs et les modalites d'organisation d'un projet",
       "2.3 : Traiter des demandes concernant les applications",
